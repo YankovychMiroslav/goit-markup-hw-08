@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav__list {
+  display: flex;
+  gap: 50px;
+}
+
+.nav__item {
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  color: $text-title-color;
+}
+.nav__link {
+  position: relative;
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  color: $text-title-color;
+  transition-property: color transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $link-focus-color;
+  }
+  &:hover:after,
+  &:focus:after {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+  }
+}

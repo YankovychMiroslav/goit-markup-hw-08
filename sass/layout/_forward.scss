@@ -1,0 +1,29 @@
+.forward {
+  padding-bottom: 0px;
+}
+.forward__list {
+  display: flex;
+  gap: 30px;
+}
+.forward__title {
+  margin-bottom: 10px;
+  width: 270px;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $text-title-color;
+}
+.forward__text {
+  width: 270px;
+  line-height: calc(24 / 14);
+  color: $text-paragraf-color;
+}
+.forward__svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background: $background;
+  border-radius: 4px;
+}

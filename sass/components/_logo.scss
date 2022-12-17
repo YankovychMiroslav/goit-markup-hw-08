@@ -1,0 +1,12 @@
+.logo {
+  margin-right: 93px;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(16 / 12);
+  color: $link-focus-color;
+}
+
+.logo__text--dark {
+  color: $text-title-color;
+}

@@ -1,0 +1,77 @@
+.group {
+  background: $background;
+}
+
+.group__title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  color: $text-title-color;
+}
+
+.group__list {
+  display: flex;
+  gap: 30px;
+}
+
+.group__item {
+  background: $text-fon-white-color;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.group__overlay {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.group__subtitle {
+  margin-bottom: 10px;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  color: $text-title-color;
+}
+.group__text {
+  justify-content: center;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  color: $text-paragraf-color;
+}
+
+.group-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.group-social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $link-background-color;
+  background-color: $text-fon-white-color;
+  outline: none;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $text-fon-white-color;
+    background-color: $link-focus-color;
+  }
+}
+.group-social__icon {
+  fill: currentColor;
+}
