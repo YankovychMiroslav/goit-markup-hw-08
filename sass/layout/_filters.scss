@@ -1,8 +1,14 @@
 .filters__list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 8px;
-  justify-content: center;
   margin-bottom: 50px;
+  padding-right: 50px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    padding-right: 0;
+  }
 }
 
 .filters__btn {

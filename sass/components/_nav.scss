@@ -1,6 +1,10 @@
 .nav {
-  display: flex;
-  align-items: center;
+  display: none;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
 .nav__list {
   display: flex;
@@ -19,21 +23,18 @@
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  margin-left: auto;
+
   font-weight: 500;
   line-height: 1.33;
   letter-spacing: 0.02em;
   color: $text-title-color;
-  transition-property: color transform;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
     color: $link-focus-color;
-  }
-  &:hover:after,
-  &:focus:after {
-    transform: translateX(-50%) scaleX(1);
-    opacity: 1;
   }
 }

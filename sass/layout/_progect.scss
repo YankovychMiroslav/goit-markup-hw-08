@@ -1,38 +1,35 @@
 .progecr__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: $indent;
 }
 
-.progect__link {
-  display: block;
-  text-decoration: none;
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
+.portfolio-items {
+  align-items: center;
+  justify-content: center;
+  $items: 1;
+  flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / #{$items});
+  @media screen and (min-width: 768px) {
+    $items: 2;
+    flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / #{$items});
   }
-
-  &:hover .overlay {
-    transform: translateY(0);
-    opacity: 1;
+  @media screen and (min-width: 1200px) {
+    $items: 3;
+    flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / #{$items});
   }
 }
 
 .progecr__thumb {
   position: relative;
   overflow: hidden;
-}
+  width: 450px;
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
 
-.progecr__overlay {
-  background: $text-fon-white-color;
-  border: 1px solid $border-cart;
-  border-top: none;
-  padding: 20px 24px;
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
 }
 
 .overlay {
@@ -56,11 +53,38 @@
   letter-spacing: 0.03em;
   color: $text-fon-white-color;
   background-color: rgba(33, 150, 243, 0.9);
+  user-select: none;
 
   transition-property: transform, opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
+}
+
+.progect__link {
+  display: block;
+  text-decoration: none;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.progecr__overlay {
+  background: $text-fon-white-color;
+  border: 1px solid $border-cart;
+  border-top: none;
+  padding: 20px 24px;
 }
 
 .project__title {
@@ -74,4 +98,18 @@
   font-size: 16px;
   line-height: calc(30 / 16);
   color: $text-paragraf-color;
+}
+
+.project__thumb img {
+  width: 450px;
+  height: 294px;
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 294px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+    height: 294px;
+  }
 }

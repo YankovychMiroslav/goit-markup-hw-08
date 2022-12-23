@@ -3,29 +3,58 @@
 }
 
 .group__title {
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: calc(42 / 36);
+  display: block;
+  margin: 0 auto;
   text-align: center;
-  color: $text-title-color;
-}
 
-.group__list {
-  display: flex;
-  gap: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: calc(33 / 28);
+
+  margin-bottom: 30px;
+  color: $text-title-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    color: $text-title-color;
+  }
 }
 
 .group__item {
-  background: $text-fon-white-color;
+  $items: 1;
+  align-items: center;
+  justify-content: center;
 
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / #{$items});
+  @media screen and (min-width: 768px) {
+    $items: 2;
+    flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / #{$items});
+  }
+  @media screen and (min-width: 1200px) {
+    $items: 4;
+    flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / #{$items});
+  }
 }
 
 .group__overlay {
+  max-width: 450px;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+
+  background-color: $text-fon-white-color;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+  }
 }
 
 .group__subtitle {
@@ -42,7 +71,21 @@
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
+  letter-spacing: 0.03em;
   color: $text-paragraf-color;
+}
+
+.group__foto {
+  width: 450px;
+  height: 460px;
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 374px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    height: 260px;
+  }
 }
 
 .group-social {
@@ -51,6 +94,9 @@
   align-items: center;
   gap: 10px;
   margin-top: 16px;
+  &__icon {
+    fill: currentColor;
+  }
 }
 .group-social__link {
   display: flex;
@@ -71,7 +117,4 @@
     color: $text-fon-white-color;
     background-color: $link-focus-color;
   }
-}
-.group-social__icon {
-  fill: currentColor;
 }

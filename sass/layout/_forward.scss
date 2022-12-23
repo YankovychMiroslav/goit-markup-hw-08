@@ -1,10 +1,47 @@
 .forward {
   padding-bottom: 0px;
 }
+
 .forward__list {
-  display: flex;
-  gap: 30px;
+  justify-content: center;
 }
+
+.forward__item {
+  $items: 1;
+  align-items: center;
+  justify-content: center;
+
+  flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / #{$items});
+  @media screen and (min-width: 768px) {
+    $items: 2;
+    flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / #{$items});
+  }
+  @media screen and (min-width: 1200px) {
+    $items: 4;
+    flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / #{$items});
+  }
+}
+
+.forward__svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 450px;
+  height: 120px;
+  margin-bottom: 30px;
+  background: $background;
+  border-radius: 4px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
+}
+
 .forward__title {
   margin-bottom: 10px;
   width: 270px;
@@ -12,18 +49,14 @@
   text-transform: uppercase;
   font-size: 14px;
   color: $text-title-color;
+
+  @media screen and (min-width: 768px) {
+    text-align: start;
+  }
 }
+
 .forward__text {
   width: 270px;
   line-height: calc(24 / 14);
   color: $text-paragraf-color;
-}
-.forward__svg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 120px;
-  margin-bottom: 30px;
-  background: $background;
-  border-radius: 4px;
 }

@@ -23,10 +23,11 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
+    <!-- Header section -->
     <header class="header">
       <div class="header__container container">
         <nav class="nav">
-          <a href="./index.html" class="logo link"
+          <a href="./index.html" class="logo logo link"
             >Web<span class="logo__text--dark">Studio</span></a
           >
           <ul class="nav__list list">
@@ -59,6 +60,7 @@
       </div>
     </header>
     <main>
+      <!-- Filters section -->
       <section class="section">
         <div class="container">
           <h1 hidden>Портфоліо</h1>
@@ -70,11 +72,26 @@
             <li><button type="button" class="filters__btn">Маркетинг</button></li>
           </ul>
 
-          <ul class="progecr__list list">
-            <li class="progect__item">
-              <a class="progect__link" href="">
+          <!-- Progec section -->
+          <ul class="progecr__list card-set list">
+            <li class="progect__item card-set-items">
+              <a class="progect__link link" href="">
                 <div class="progecr__thumb">
-                  <img src="./images/hw1.jpg" alt="фото1" />
+                  <img
+                    srcset="
+                      ./images/portfolio/img1/img_m.jpg    354w,
+                      ./images/portfolio/img1/img_l.jpg    370w,
+                      ./images/portfolio/img1/img_s.jpg    540w,
+                      ./images/portfolio/img1/img_m@2x.jpg 708w,
+                      ./images/portfolio/img1/img_l@2x.jpg 740w,
+                      ./images/portfolio/img1/img_s@2x.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/img1/img_m.jpg"
+                    alt="фото1"
+                    width="370"
+                    loading="lazy"
+                  />
                   <div class="overlay">
                     <p class="overlay-teax">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -89,72 +106,257 @@
                 </div>
               </a>
             </li>
-            <li>
-              <a class="progect__link" href="">
-                <img src="./images/hw2.jpg" alt="фото2" />
+            <li class="portfolio-items card-set-items">
+              <a class="progect__link link" href="">
+                <div class="progecr__thumb">
+                  <img
+                    srcset="
+                      ./images/portfolio/img2/img_m.jpg    354w,
+                      ./images/portfolio/img2/img_l.jpg    370w,
+                      ./images/portfolio/img2/img_s.jpg    540w,
+                      ./images/portfolio/img2/img_m@2x.jpg 708w,
+                      ./images/portfolio/img2/img_l@2x.jpg 740w,
+                      ./images/portfolio/img2/img_s@2x.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/img2/img_m.jpg"
+                    alt="фото2"
+                    width="370"
+                    loading="lazy"
+                  />
+                  <div class="overlay">
+                    <p class="overlay-teax">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
                 <div class="progecr__overlay">
                   <h2 class="project__title">Постер New Orlean vs Golden Star</h2>
                   <p class="project__subtitle">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="portfolio-items card-set-items">
               <a class="progect__link" href="">
-                <img src="./images/hw3.jpg" alt="фото3" />
+                <div class="progecr__thumb">
+                  <img
+                    srcset="
+                      ./images/portfolio/img3/img_m.jpg    354w,
+                      ./images/portfolio/img3/img_l.jpg    370w,
+                      ./images/portfolio/img3/img_s.jpg    540w,
+                      ./images/portfolio/img3/img_m@2x.jpg 708w,
+                      ./images/portfolio/img3/img_l@2x.jpg 740w,
+                      ./images/portfolio/img3/img_s@2x.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px,
+                (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/img3/img_m.jpg"
+                    alt="фото3"
+                    width="370"
+                    loading="lazy"
+                  />
+                  <div class="overlay">
+                    <p class="overlay-teax">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
                 <div class="progecr__overlay">
                   <h2 class="project__title">Ресторан Seafood</h2>
                   <p class="project__subtitle">Додаток</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="portfolio-items card-set-items">
               <a class="progect__link" href="">
-                <img src="./images/hw4.jpg" alt="фото4" />
+                <div class="progecr__thumb">
+                  <img
+                    srcset="
+                      ./images/portfolio/img4/img_m.jpg    354w,
+                      ./images/portfolio/img4/img_l.jpg    370w,
+                      ./images/portfolio/img4/img_s.jpg    540w,
+                      ./images/portfolio/img4/img_m@2x.jpg 708w,
+                      ./images/portfolio/img4/img_l@2x.jpg 740w,
+                      ./images/portfolio/img4/img_s@2x.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/img4/img_m.jpg"
+                    alt="фото4"
+                    width="370"
+                    loading="lazy"
+                  />
+                  <div class="overlay">
+                    <p class="overlay-teax">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
                 <div class="progecr__overlay">
                   <h2 class="project__title">Проєкт Prime</h2>
                   <p class="project__subtitle">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="portfolio-items card-set-items">
               <a class="progect__link" href="">
-                <img src="./images/hw5.jpg" alt="фото5" />
+                <div class="progecr__thumb">
+                  <img
+                    srcset="
+                      ./images/portfolio/img5/img_m.jpg    354w,
+                      ./images/portfolio/img5/img_l.jpg    370w,
+                      ./images/portfolio/img5/img_s.jpg    540w,
+                      ./images/portfolio/img5/img_m@2x.jpg 708w,
+                      ./images/portfolio/img5/img_l@2x.jpg 740w,
+                      ./images/portfolio/img5/img_s@2x.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/img5/img_m.jpg"
+                    alt="фото5"
+                    width="370"
+                    loading="lazy"
+                  />
+                  <div class="overlay">
+                    <p class="overlay-teax">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
                 <div class="progecr__overlay">
                   <h2 class="project__title">Проєкт Boxes</h2>
                   <p class="project__subtitle">Додаток</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="portfolio-items card-set-items">
               <a class="progect__link" href="">
-                <img src="./images/hw6.jpg" alt="фото6" />
+                <div class="progecr__thumb">
+                  <img
+                    srcset="
+                      ./images/portfolio/img6/img_m.jpg    354w,
+                      ./images/portfolio/img6/img_l.jpg    370w,
+                      ./images/portfolio/img6/img_s.jpg    540w,
+                      ./images/portfolio/img6/img_m@2x.jpg 708w,
+                      ./images/portfolio/img6/img_l@2x.jpg 740w,
+                      ./images/portfolio/img6/img_s@2x.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/img6/img_m.jpg "
+                    alt="фото6"
+                    width="370"
+                    loading="lazy"
+                  />
+                  <div class="overlay">
+                    <p class="overlay-teax">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
                 <div class="progecr__overlay">
                   <h2 class="project__title" lang="en">Inspiration has no Borders</h2>
                   <p class="project__subtitle">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="portfolio-items card-set-items">
               <a class="progect__link" href="">
-                <img src="./images/hw7.jpg" alt="фото7" />
+                <div class="progecr__thumb">
+                  <img
+                    srcset="
+                      ./images/portfolio/img7/img_m.jpg    354w,
+                      ./images/portfolio/img7/img_l.jpg    370w,
+                      ./images/portfolio/img7/img_s.jpg    540w,
+                      ./images/portfolio/img7/img_m@2x.jpg 708w,
+                      ./images/portfolio/img7/img_l@2x.jpg 740w,
+                      ./images/portfolio/img7/img_s@2x.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/img7/img_m.jpg"
+                    alt="фото7"
+                    width="370"
+                    loading="lazy"
+                  />
+                  <div class="overlay">
+                    <p class="overlay-teax">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
                 <div class="progecr__overlay">
                   <h2 class="project__title">Видання Limited Edition</h2>
                   <p class="project__subtitle">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="portfolio-items card-set-items">
               <a class="progect__link" href="">
-                <img src="./images/hw8.jpg" alt="фото8" />
+                <div class="progecr__thumb">
+                  <img
+                    srcset="
+                      ./images/portfolio/img8/img_m.jpg    354w,
+                      ./images/portfolio/img8/img_l.jpg    370w,
+                      ./images/portfolio/img8/img_s.jpg    540w,
+                      ./images/portfolio/img8/img_m@2x.jpg 708w,
+                      ./images/portfolio/img8/img_l@2x.jpg 740w,
+                      ./images/portfolio/img8/img_s@2x.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/img8/img_m.jpg"
+                    alt="фото8"
+                    width="370"
+                    loading="lazy"
+                  />
+                  <div class="overlay">
+                    <p class="overlay-teax">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
                 <div class="progecr__overlay">
                   <h2 class="project__title">Проєкт LAB</h2>
                   <p class="project__subtitle">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li>
+            <li class="portfolio-items card-set-items">
               <a class="progect__link" href="">
-                <img src="./images/hw9.jpg" alt="фото9" />
+                <div class="progecr__thumb">
+                  <img
+                    srcset="
+                      ./images/portfolio/img9/img_m.jpg    354w,
+                      ./images/portfolio/img9/img_l.jpg    370w,
+                      ./images/portfolio/img9/img_s.jpg    540w,
+                      ./images/portfolio/img9/img_m@2x.jpg 708w,
+                      ./images/portfolio/img9/img_l@2x.jpg 740w,
+                      ./images/portfolio/img9/img_s@2x.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/portfolio/img9/img_m.jpg"
+                    alt="фото9"
+                    width="370"
+                    loading="lazy"
+                  />
+                  <div class="overlay">
+                    <p class="overlay-teax">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
                 <div class="progecr__overlay">
                   <h2 class="project__title">Growing Business</h2>
                   <p class="project__subtitle">Додаток</p>
@@ -166,10 +368,11 @@
       </section>
     </main>
 
+    <!-- Footer section -->
     <footer class="footer">
       <div class="footer__overlay container">
         <div class="footer__left">
-          <a class="logo__footer link" href="./index.html"
+          <a class="logo logo__footer link" href="./index.html"
             >Web<span class="logo__text--light">Studio</span></a
           >
           <address>

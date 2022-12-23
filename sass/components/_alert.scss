@@ -4,7 +4,7 @@
   &::after {
     content: '';
     position: absolute;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scaleX(0.3);
     left: 50%;
 
     display: block;
@@ -12,10 +12,13 @@
     height: 4px;
 
     border-radius: 2px;
-    bottom: -4px;
+    bottom: -1px;
 
     background-color: $link-focus-color;
-    opacity: 1;
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
   }
   &:hover:after,
   &:focus:after {

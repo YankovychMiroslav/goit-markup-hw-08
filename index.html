@@ -23,11 +23,12 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
+    <!-- Header section -->
     <header class="header">
       <div class="header__container container">
         <nav class="nav">
-          <a href="./index.html" class="logo link"
-            >Web<span class="logo__text--dark">Studio</span></a
+          <a href="./index.html" class="logo logo__header link"
+            >Web<span class="logo logo__text--dark">Studio</span></a
           >
           <ul class="nav__list list">
             <li class="nav__item">
@@ -41,14 +42,14 @@
         </nav>
 
         <ul class="header__list list">
-          <li>
+          <li class="header__contacts-item">
             <a href="mailto:info@devstudio.com" class="header__contact link"
               ><svg class="header__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope-hover"></use></svg
               >info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="header__contacts-item">
             <a href="tel:+380961111111" class="header__contact link"
               ><svg class="header__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use></svg
@@ -56,9 +57,15 @@
             >
           </li>
         </ul>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="header__mobile-menu" width="40" height="40">
+            <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
+      <!-- Hero section -->
       <section class="hero section">
         <div class="container">
           <h1 class="hero__h">Ефективні рішення для вашого бізнесу</h1>
@@ -66,11 +73,12 @@
         </div>
       </section>
 
+      <!-- Forward section -->
       <section class="forward section">
         <div class="container">
           <h2 hidden>особливості</h2>
-          <ul class="forward__list list">
-            <li>
+          <ul class="forward__list card-set list">
+            <li class="forward__item card-set-item">
               <div class="forward__svg">
                 <svg class="forward__icon" width="70" height="70">
                   <use href="./images/icons.svg#icon-antenna-1"></use>
@@ -81,7 +89,7 @@
                 Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
               </p>
             </li>
-            <li>
+            <li class="forward__item card-set-item">
               <div class="forward__svg">
                 <svg class="forward__icon" width="70" height="70">
                   <use href="./images/icons.svg#icon-clock-1"></use>
@@ -92,7 +100,7 @@
                 Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
               </p>
             </li>
-            <li>
+            <li class="forward__item card-set-item">
               <div class="forward__svg">
                 <svg class="forward__icon" width="70" height="70">
                   <use href="./images/icons.svg#icon-diagram-1"></use>
@@ -103,7 +111,7 @@
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li>
+            <li class="forward__item card-set-item">
               <div class="forward__svg">
                 <svg class="forward__icon" width="70" height="70">
                   <use href="./images/icons.svg#icon-astronaut-1"></use>
@@ -118,38 +126,78 @@
         </div>
       </section>
 
+      <!-- Production section -->
       <section class="production section">
         <div class="container">
           <h2 class="production__title">Чим ми займаємося</h2>
           <ul class="production__list list">
             <li class="production__gallery">
-              <img src="./images/box1.jpg" alt="фото1комп" width="370" height="294" />
-              <div class="production__overlay">
-                <p class="production__subtitle">Десктопні додатки</p>
+              <div class="production__thumb">
+                <img
+                  srcset="./images/production/img-1.jpg 1x, images/production/img@2x-1.jpg 2x"
+                  src="./images/production/img-1.jpg"
+                  alt="фото1комп"
+                  width="370"
+                  height="294"
+                />
+                <div class="production__overlay">
+                  <p class="production__subtitle">Десктопні додатки</p>
+                </div>
               </div>
             </li>
             <li class="production__gallery">
-              <img src="./images/box2.jpg" alt="фото2комп+телеф" width="370" height="294" />
-              <div class="production__overlay">
-                <p class="production__subtitle">Мобільні додатки</p>
+              <div class="production__thumb">
+                <img
+                  srcset="images/production/img-2.jpg 1x, images/production/img@2x-2.jpg 2x"
+                  src="./mages/production/img-2.jpg"
+                  alt="фото2комп+телеф"
+                  width="370"
+                  height="294"
+                />
+                <div class="production__overlay">
+                  <p class="production__subtitle">Мобільні додатки</p>
+                </div>
               </div>
             </li>
             <li class="production__gallery">
-              <img src="./images/box3.jpg" alt="фото3планшет" width="370" height="294" />
-              <div class="production__overlay">
-                <p class="production__subtitle">Дизайнерські рішення</p>
+              <div class="production__thumb">
+                <img
+                  srcset="images/production/img-3.jpg 1x, images/production/img@2x-3.jpg 2x"
+                  src="./images/production/img-3.jpg"
+                  alt="фото3планшет"
+                  width="370"
+                  height="294"
+                />
+                <div class="production__overlay">
+                  <p class="production__subtitle">Дизайнерські рішення</p>
+                </div>
               </div>
             </li>
           </ul>
         </div>
       </section>
 
+      <!-- Group section -->
       <section class="group section">
         <div class="container">
           <h2 class="group__title">Наша команда</h2>
-          <ul class="group__list list">
-            <li class="group__item">
-              <img src="./images/img2.jpg" alt="команда1ч" width="270" height="260" />
+          <ul class="group__list card-set list">
+            <li class="group__item card-set-items">
+              <img
+                class="group__foto"
+                srcset="
+                  ./images/group/img_270-2.jpg    270w,
+                  ./images/group/img_354-2.jpg    354w,
+                  ./images/group/img_450-2.jpg    450w,
+                  ./images/group/img_540@2x-2.jpg 540w,
+                  ./images/group/img_708@2x-2.jpg 708w,
+                  ./images/group/img_900@2x-2.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/group/img_270-2.jpg"
+                alt="команда1ч"
+                loading="lazy"
+              />
               <div class="group__overlay">
                 <h3 class="group__subtitle">Ігор Дем'яненко</h3>
                 <p class="group__text" lang="en">Product Designer</p>
@@ -209,8 +257,22 @@
                 </ul>
               </div>
             </li>
-            <li class="group__item">
-              <img src="./images/img1.jpg" alt="комана2ж" width="270" height="260" />
+            <li class="group__item card-set-items">
+              <img
+                class="group__foto"
+                srcset="
+                  ./images/group/img_270-1.jpg    270w,
+                  ./images/group/img_354-1.jpg    354w,
+                  ./images/group/img_450-1.jpg    450w,
+                  ./images/group/img_540@2x-1.jpg 540w,
+                  ./images/group/img_708@2x-1.jpg 708w,
+                  ./images/group/img_900@2x-1.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/group/img_270-1.jpg"
+                alt="комана2ж"
+                loading="lazy"
+              />
               <div class="group__overlay">
                 <h3 class="group__subtitle">Ольга Рєпіна</h3>
                 <p class="group__text" lang="en">Frontend Developer</p>
@@ -270,8 +332,22 @@
                 </ul>
               </div>
             </li>
-            <li class="group__item">
-              <img src="./images/img3.jpg" alt="команда3ч" width="270" height="260" />
+            <li class="group__item card-set-items">
+              <img
+                class="group__foto"
+                srcset="
+                  ./images/group/img_270-3.jpg    270w,
+                  ./images/group/img_354-3.jpg    354w,
+                  ./images/group/img_450-3.jpg    450w,
+                  ./images/group/img_540@2x-3.jpg 540w,
+                  ./images/group/img_708@2x-3.jpg 708w,
+                  ./images/group/img_900@2x-3.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/group/img_270-3.jpg "
+                alt="команда3ч"
+                loading="lazy"
+              />
               <div class="group__overlay">
                 <h3 class="group__subtitle">Микола Тарасов</h3>
                 <p class="group__text" lang="en">Marketing</p>
@@ -331,8 +407,22 @@
                 </ul>
               </div>
             </li>
-            <li class="group__item">
-              <img src="./images/img.jpg" alt="команда4ч" width="270" height="260" />
+            <li class="group__item card-set-items">
+              <img
+                class="group__foto"
+                srcset="
+                  ./images/group/img_270-4.jpg    270w,
+                  ./images/group/img_354-4.jpg    354w,
+                  ./images/group/img_450-4.jpg    450w,
+                  ./images/group/img_540@2x-4.jpg 540w,
+                  ./images/group/img_708@2x-4.jpg 708w,
+                  ./images/group/img_900@2x-4.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/group/img_270-4.jpg"
+                alt="команда4ч"
+                loading="lazy"
+              />
               <div class="group__overlay">
                 <h3 class="group__subtitle">Михайло Єрмаков</h3>
                 <p class="group__text" lang="en">UI Designer</p>
@@ -396,11 +486,12 @@
         </div>
       </section>
 
+      <!-- Partners section -->
       <section class="partners">
         <div class="container">
           <h2 class="partners__title">Постійні клієнти</h2>
           <ul class="partners__list list">
-            <li class="item">
+            <li class="partners__item">
               <a
                 href=""
                 class="partners__link link"
@@ -411,7 +502,7 @@
                   <use href="./images/icons.svg#icon-Logo-1"></use></svg
               ></a>
             </li>
-            <li class="item">
+            <li class="partners__item">
               <a
                 href=""
                 class="partners__link link"
@@ -422,7 +513,7 @@
                   <use href="./images/icons.svg#icon-Logo-2"></use></svg
               ></a>
             </li>
-            <li class="item">
+            <li class="partners__item">
               <a
                 href=""
                 class="partners__link link"
@@ -433,7 +524,7 @@
                   <use href="./images/icons.svg#icon-Logo-3"></use></svg
               ></a>
             </li>
-            <li class="item">
+            <li class="partners__item">
               <a
                 href=""
                 class="partners__link link"
@@ -471,10 +562,11 @@
       </section>
     </main>
 
+    <!-- Footer section -->
     <footer class="footer">
       <div class="footer__overlay container">
         <div class="footer__left">
-          <a class="logo__footer link" href="./index.html"
+          <a class="logo logo__footer link" href="./index.html"
             >Web<span class="logo__text--light">Studio</span></a
           >
           <address>
@@ -497,7 +589,7 @@
             </ul>
           </address>
         </div>
-        <div class="">
+        <div class="footer__center">
           <p class="footer-social__title">ПРИЄДНУЙТЕСЬ</p>
           <ul class="footer-social__list list">
             <li class="footer-social__item">
@@ -557,19 +649,23 @@
         <div class="footer-email__overlay">
           <p class="footer-email__subtitle">Підпишіться на розсилку</p>
           <form class="footer-email__box">
-            <input
-              class="footer-email__footer"
-              type="email"
-              name="user_mail"
-              id="user_email"
-              placeholder="E-mail"
-            />
-            <button class="footer-email__btn" type="submit">
-              Підписатися
-              <svg class="footer-email__icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-send-fly"></use>
-              </svg>
-            </button>
+            <div class="footer__subscription">
+              <label class="footer__label" for="user_footer_imail">
+                <input
+                  class="footer-email__footer"
+                  type="email"
+                  name="user_mail"
+                  id="user_email"
+                  placeholder="E-mail"
+                />
+              </label>
+              <button class="footer-email__btn" type="submit">
+                Підписатися
+                <svg class="footer-email__icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send-fly"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>
