@@ -31,7 +31,6 @@
 }
 
 .header__icon {
-  margin-right: 10px;
   fill: currentColor;
 }
 
@@ -42,7 +41,7 @@
   gap: 10px;
   align-items: center;
   font-weight: 500;
-  line-height: calc(24 / 14);
+  line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   text-decoration: none;
   color: $text-paragraf-color;

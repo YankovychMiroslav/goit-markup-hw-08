@@ -26,13 +26,13 @@
     <!-- Header section -->
     <header class="header">
       <div class="header__container container">
+        <a href="./index.html" class="logo logo__header link"
+          >Web<span class="logo logo__text--dark">Studio</span></a
+        >
         <nav class="nav">
-          <a href="./index.html" class="logo logo__header link"
-            >Web<span class="logo logo__text--dark">Studio</span></a
-          >
           <ul class="nav__list list">
             <li class="nav__item">
-              <a href="./index.html" class="nav__link link alert">Студія</a>
+              <a href="./index.html" class="nav__link alert link">Студія</a>
             </li>
             <li class="nav__item">
               <a href="./portfolio.html" class="nav__link link">Портфоліо</a>
@@ -589,7 +589,7 @@
             </ul>
           </address>
         </div>
-        <div class="footer__center">
+        <div class="footer__center footer__block">
           <p class="footer-social__title">ПРИЄДНУЙТЕСЬ</p>
           <ul class="footer-social__list list">
             <li class="footer-social__item">
@@ -732,6 +732,79 @@
         </form>
       </div>
     </div>
+
+    <!------------Modal Menu------------>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu__icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-close-black"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class><a href="./index.html" class="link alert">Студія</a></li>
+        <li class><a href="./portfolio.html" class="link">Портфоліо</a></li>
+        <li class><a href="" class="link">Контакти</a></li>
+      </ul>
+      <ul class="menu__contacts list">
+        <li class="menu__contacts-item">
+          <a href="" class="menu__contacts-phone link">+38 096 111 11 11</a>
+        </li>
+        <li class="menu__contacts-item">
+          <a href="" class="menu__contacts-link link">info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="menu__socials list">
+        <li class="menu__socials-item">
+          <a
+            href=""
+            class="menu__socials-link menu__socials-after link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="instagram icon"
+            >Instagram</a
+          >
+        </li>
+        <li class="menu__socials-item">
+          <a
+            href=""
+            class="menu__socials-link menu__socials-after link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter icon"
+            >Twitter</a
+          >
+        </li>
+        <li class="menu__socials-item">
+          <a
+            href=""
+            class="menu__socials-link menu__socials-after link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook icon"
+            >Facebook</a
+          >
+        </li>
+        <li class="menu__socials-item">
+          <a
+            href=""
+            class="menu__socials-link link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn icon"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+    </div>
+
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

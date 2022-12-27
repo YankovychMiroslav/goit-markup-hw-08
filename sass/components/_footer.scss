@@ -10,18 +10,24 @@
   flex-wrap: wrap;
   gap: 60px;
   @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
+    justify-content: center;
   }
 }
 .footer__left {
   @media screen and (min-width: 1200px) {
-    margin-right: 70px;
     min-width: 231px;
   }
 }
 
 .footer__items {
   margin-bottom: 9px;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .footer__gps {
@@ -56,6 +62,7 @@
     }
   }
 }
+
 .footer-social__title {
   margin-bottom: 20px;
   display: block;
@@ -110,7 +117,6 @@
 
 .footer-email__overlay {
   @media screen and (min-width: 1200px) {
-    margin-left: 93px;
   }
 }
 
@@ -223,6 +229,9 @@
   font-size: 26px;
   line-height: calc(31 / 26);
   color: $link-focus-color;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 .logo__text--light {
   width: 145px;

@@ -74,7 +74,7 @@
   position: absolute;
   top: 10px;
   right: 15px;
-  color: #fff;
+  color: $text-fon-white-color;
 }
 
 .mobile-menu {
@@ -98,7 +98,7 @@
   text-decoration: none;
 }
 
-.mobile-menu .active {
+.mobile-menu .alert {
   color: $link-focus-color;
 }
 .menu__contacts {
