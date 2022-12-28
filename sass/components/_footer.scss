@@ -51,7 +51,7 @@
     color: $link-focus-color;
   }
 
-  .footer__center {
+  .footer__block {
     @media screen and (min-width: 768px) {
       margin-left: 105px;
     }
@@ -184,7 +184,7 @@
     border-color: $link-focus-color;
   }
 }
-.footer-email__footer:placeholder {
+.footer-email__footer::placeholder {
   display: flex;
   align-items: center;
   letter-spacing: 0.03em;

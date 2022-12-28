@@ -309,12 +309,12 @@ img {
   color: #2196f3;
 }
 @media screen and (min-width: 768px) {
-  .footer__link .footer__center {
+  .footer__link .footer__block {
     margin-left: 105px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer__link .footer__center {
+  .footer__link .footer__block {
     margin-right: 23px;
     margin-left: 0;
     padding-top: 12px;
@@ -474,7 +474,57 @@ img {
   border-color: #2196f3;
 }
 
-.footer-email__footer:placeholder {
+.footer-email__footer::-webkit-input-placeholder {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  letter-spacing: 0.03em;
+  margin-right: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-email__footer::-moz-placeholder {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  margin-right: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-email__footer:-ms-input-placeholder {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  letter-spacing: 0.03em;
+  margin-right: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-email__footer::-ms-input-placeholder {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  letter-spacing: 0.03em;
+  margin-right: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-email__footer::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
